@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "scrap_discours",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args":["Valéry Giscard d'Estaing","2000000"]
+        },
+        {
+            "name": "count_french_words",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args":["/Users/cedricnicolas/Documents/analyse_discours/results/Nicolas Sarkozy.txt"]
+        }
+    ]
+    
+}
