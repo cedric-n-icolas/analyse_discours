@@ -11,23 +11,22 @@ def is_proper_noun(token):
     return token.pos == PROPN
 
 def compter_mots_francais(fichier):
-    # Chargez le modèle de langue française de spaCy
+    # Charge le modèle de langue française de spaCy
     nlp = spacy.load('fr_core_news_md')
 
-    # Lisez le contenu du fichier
+    # Lis le contenu du fichier
     with open(fichier, 'r', encoding='utf-8') as f:
         texte = f.read()
+    # augmente la taille du modèle en fonction de la taille du fichier à traiter
+    nlp.max_length = len(texte) + 100 
 
-    nlp.max_length = len(texte) + 100
-
-    # Traitez le texte avec spaCy
+    # Traite le texte avec spaCy
     doc = nlp(texte)
     stop_words = nlp.Defaults.stop_words
-    # Extraire les mots français (tokens) en ignorant la ponctuation et les espaces
+    # Extraire les mots français (tokens) en ignorant la ponctuation et les espaces et les noms propres.
     mots = [token.lemma_ for token in doc if token.is_alpha and token.lemma_ not in stop_words and token.lemma_ and not is_proper_noun(token) ]
-
     
-    # Comptez les mots différents
+    # Compte les mots différents
     return(Counter(mots))
 
 if __name__ == "__main__":
