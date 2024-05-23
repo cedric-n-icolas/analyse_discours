@@ -4,6 +4,12 @@ En utilisant le site open data https://www.vie-publique.fr/ qui contient sur cet
 
 
 Usage : 
-python scrap_discours.py <nom président> <taille max à analyser>  #va créer un fichier contenant une sélection de conférences de presse, interviews, déclarations dont l'auteur est le nom d'un des présidents de la république française depuis 1974.
 
-python count_french_words.py <nom du fichier à analyser> #va lemmatiser et compter les mots français présents dans le fichier passé en paramètre. Affiche les 100 premiers mots utilisés.
+`python scrap_discours.py <nom président> <taille max à analyser>`
+
+Va créer un fichier contenant une sélection de conférences de presse, interviews, déclarations dont l'auteur est le nom d'un des présidents de la république française depuis 1974.`
+
+`python count_french_words.py <nom du fichier à analyser>`
+ 
+ Va lemmatiser et compter les mots français présents dans le fichier passé en paramètre. Affiche les 100 premiers mots utilisés.`
+
